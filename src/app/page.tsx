@@ -106,7 +106,7 @@ export default function HomePage() {
               Uncover the secrets behind any WordPress site with WP-EXPOSE.
               Our tool dives deep into the structure of websites, revealing
               the themes and plugins powering their performance.
-              Whether you're a developer looking to learn from others
+              Whether you&apos;re a developer looking to learn from others
               or just curious about the tech behind your favorite sites,
               WP-EXPOSE delivers the details you need.
             </div>
@@ -124,11 +124,13 @@ export default function HomePage() {
             </div>
             <div className="my-3">
               {stage["theme"] === 1 && (
-                <ThemeCard
-                  currentStage={currentStage}
-                  loading={loading}
-                  theme={theme}
-                />
+                theme && (
+                  <ThemeCard
+                    currentStage={currentStage}
+                    loading={loading}
+                    theme={theme}
+                  />
+                )
               )
               }
 
@@ -137,8 +139,8 @@ export default function HomePage() {
             <div className="my-3">
               {stage["plugins"] === 1 && (
                 <PluginCards
-                  stage={stage}
-                  loading={loading}
+                  // stage={stage}
+                  // loading={loading}
                   plugins={plugins}
                 />
               )

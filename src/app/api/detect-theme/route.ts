@@ -1,4 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextRequest } from 'next/server';
 import { detectWordPressTheme } from '@/utils/detectWordPressTheme';
 
@@ -19,7 +18,11 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const theme: Theme = await detectWordPressTheme(url);
+    const theme: Theme | undefined = await detectWordPressTheme(url);
+
+    if (!theme) {
+      return new Response(JSON.stringify({ stage: 'checking', error: 'No theme detected' }), { status: 404 });
+    }
 
     return new Response(JSON.stringify(theme), { status: 200 });
   } catch (error) {
