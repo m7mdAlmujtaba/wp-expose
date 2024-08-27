@@ -55,7 +55,16 @@ const config: Config = {
         '7/10': '70%',
         '8/10': '80%',
         '9/10': '90%',
-      }
+      },
+      animation: {
+        rotate: 'rotate 10s linear infinite',
+      },
+      keyframes: {
+        rotate: {
+          '0%': { transform: 'rotate(0deg) scale(10)' },
+          '100%': { transform: 'rotate(360deg) scale(10)' },
+        },
+      },
     },
   },
   plugins: [],

@@ -68,8 +68,8 @@ export default function HomePage() {
   };
 
   return (
-    <div className="">
-      <div className="container bg-white mx-auto">
+    <div className="bg-white">
+      <div className="container  mx-auto">
         <div className="flex flex-row">
 
           <div className='basis-1/10 h-[75vh] flex flex-column overflow-hidden'>
@@ -154,9 +154,9 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <BlogGrid />
-        </div>
+        </div> */}
       </div>
     </div>
   );

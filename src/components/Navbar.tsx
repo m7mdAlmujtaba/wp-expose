@@ -20,8 +20,8 @@ const Navbar = () => {
                 <div className="max-w-screen-xl flex items-center justify-between ">
                 <a href="/" className="relative flex items-center space-x-3 rtl:space-x-reverse">
                         <div className="relative z-10 flex w-full cursor-pointer items-center overflow-hidden border border-white-800 shadow-xl rounded  p-[2px]">
-                            <div className="animate-rotate absolute inset-0 h-full w-full rounded-full bg-[conic-gradient(#EAB308_20deg,transparent_120deg)]"></div>
-                            <span className="self-center z-20  text-white text-sm font-extrabold whitespace-nowrap dark:text-white uppercase rounded p-2 shadow-xl bg-yellow-500">
+                            <div className="animate-rotate absolute inset-0 h-full w-full rounded-full bg-[conic-gradient(#EAB308_120deg,transparent_20deg)]"></div>
+                            <span className="self-center z-20  text-white text-sm font-extrabold whitespace-nowrap dark:text-white uppercase rounded p-2 shadow-xl bg-yellow-500 ">
                                WP-EXPOSE</span>
                         </div>
                     </a>
