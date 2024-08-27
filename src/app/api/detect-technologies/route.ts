@@ -39,26 +39,15 @@ export async function GET(req: NextRequest) {
     const html = response.data;
 
     const isWordPress = html.includes('wp-content') || html.includes('wp-includes');
-    const language = await detectProgrammingLanguage(html, url);
+    // const language = await detectProgrammingLanguage(html, url);
     
     let details: DetectResponse = {
       stage: 'theme',
       isWordPress,
     };
 
-    if (isWordPress) {
-      const theme = await detectWordPressTheme(url);
-      details = { ...details, theme, stage: 'plugins' };
-
-      // Delay plugin detection to make it look staged
-      const plugins = await detectWordPressPlugins(html);
-      details = { ...details, plugins, stage: 'completed' };
-    } else {
-      details.stage = 'completed';
-    }
-
     // Add programming language details
-    details.language = language;
+    // details.language = language;
     
     return new Response(JSON.stringify(details), { status: 200 });
   } catch (error) {
