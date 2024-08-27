@@ -18,12 +18,11 @@ const Navbar = () => {
         <div className="mx-2 my-1">
             <nav className="bg-white bg-opacity-80 border-gray-200 dark:bg-gray-900 relative z-50">
                 <div className="max-w-screen-xl flex items-center justify-between ">
-                    <a href='/' className="flex items-center cursor">
-                        <div className="bg-themeYellowOrange border text-white font-bold py-1 pl-3 m-0 rounded-l-md">
-                            WP
-                        </div>
-                        <div className="text-themeYellowOrange font-bold py-1 pr-3 border m-0  border-themeYellowOrange rounded-r-md">
-                            EXPOSE
+                <a href="/" className="relative flex items-center space-x-3 rtl:space-x-reverse">
+                        <div className="relative z-10 flex w-full cursor-pointer items-center overflow-hidden border border-white-800 shadow-xl rounded  p-[2px]">
+                            <div className="animate-rotate absolute inset-0 h-full w-full rounded-full bg-[conic-gradient(#EAB308_20deg,transparent_120deg)]"></div>
+                            <span className="self-center z-20  text-white text-sm font-extrabold whitespace-nowrap dark:text-white uppercase rounded p-2 shadow-xl bg-yellow-500">
+                               WP-EXPOSE</span>
                         </div>
                     </a>
                     {/* Navigation Menu for Large and Medium Screens */}
