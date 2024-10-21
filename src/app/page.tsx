@@ -87,15 +87,14 @@ export default function HomePage() {
               <Navbar />
             </div>
             <div className="block sm:hidden mb-5">
-              <div className="mx-auto">
+              <div className="mx-auto text-center">
                 <div className='text-white'>
-                  <h2 className='uppercase text-sm font-black mb-3'>
+                  <h2 className='uppercase text-xl font-black mb-3'>
                     Discover Hidden WordPress Insights
                   </h2>
                 </div>
                 <span className='text-white'>
-
-                WP-EXPOSE reveals the themes and plugins behind any WordPress site, making it ideal for developers and curious users wanting to understand the technology of their favorite sites.
+                Unleash your inner tech detective with WP-EXPOSE! We reveal the secret sauce of WordPress sites—themes and plugins galore! Perfect for curious minds and code ninjas alike!
                 </span>
               </div>
             </div>
