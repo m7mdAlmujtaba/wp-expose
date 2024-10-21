@@ -70,9 +70,9 @@ export default function HomePage() {
   return (
     <div className="bg-white">
       <div className="container  mx-auto">
-        <div className="flex flex-row">
+        <div className="flex flex-wrap">
 
-          <div className='basis-1/10 h-[75vh] flex flex-column overflow-hidden'>
+          <div className='basis-0 sm:basis-1/10  h-[75vh] flex flex-column overflow-hidden'>
 
             <div className=" flex text-center font-bold items-center justify-center overflow-hidden">
               <div className="text-xs uppercase transform rotate-90 whitespace-nowrap text-ellipsis">
@@ -82,7 +82,23 @@ export default function HomePage() {
           </div>
 
 
-          <div className="basis-2/7 pr-3">
+          <div className=" bg-[#384670] basis-full sm:basis-2/7 sm:pr-3  h-[75vh] p-6 rounded-b-2xl shadow-2xl">
+            <div className="block sm:hidden mb-5">
+              <Navbar />
+            </div>
+            <div className="block sm:hidden mb-5">
+              <div className="mx-auto">
+                <div className='text-white'>
+                  <h2 className='uppercase text-sm font-black mb-3'>
+                    Discover Hidden WordPress Insights
+                  </h2>
+                </div>
+                <span className='text-white'>
+
+                WP-EXPOSE reveals the themes and plugins behind any WordPress site, making it ideal for developers and curious users wanting to understand the technology of their favorite sites.
+                </span>
+              </div>
+            </div>
             <Form
               onSubmit={handleDetectTechnologies}
               onDetectTheme={handleDetectTheme}
@@ -91,25 +107,29 @@ export default function HomePage() {
               loading={loading}
             />
           </div>
-          <div className="basis-4/7 p-3">
+          <div className="basis-full sm:basis-4/7 p-3">
 
-            <Navbar />
 
-            <div className="mx-auto pt-20">
-              <div className='bg-white/20 backdrop-blur-md'>
-                <h2 className='uppercase text-sm font-black text-black mb-3'>
-                  Discover Hidden WordPress Insights
-                </h2>
+            <div className='hidden sm:block'>
+              <Navbar />
+
+              <div className=" mx-auto pt-20">
+                <div className='bg-white/20 backdrop-blur-md'>
+                  <h2 className='uppercase text-sm font-black text-black mb-3'>
+                    Discover Hidden WordPress Insights
+                  </h2>
+                </div>
+                Uncover the secrets behind any WordPress site with WP-EXPOSE.
+                Our tool dives deep into the structure of websites, revealing
+                the themes and plugins powering their performance.
+                Whether you&apos;re a developer looking to learn from others
+                or just curious about the tech behind your favorite sites,
+                WP-EXPOSE delivers the details you need.
               </div>
-
-
-              Uncover the secrets behind any WordPress site with WP-EXPOSE.
-              Our tool dives deep into the structure of websites, revealing
-              the themes and plugins powering their performance.
-              Whether you&apos;re a developer looking to learn from others
-              or just curious about the tech behind your favorite sites,
-              WP-EXPOSE delivers the details you need.
             </div>
+
+
+
             <div className="mb-3">
               {stage["checking"] === 1 && (
                 <Technologies

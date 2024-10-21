@@ -18,7 +18,7 @@ export default function Form({ onSubmit, onDetectTheme, onDetectPlugins, isWordP
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md h-[75vh] bg-[#384670] p-6 rounded-b-2xl shadow-2xl">
+    <form onSubmit={handleSubmit} className="w-full max-w-md">
       <label htmlFor="url" className="block font-medium text-xs uppercase text-white mb-2">Website URL</label>
       <input
         type="url"
